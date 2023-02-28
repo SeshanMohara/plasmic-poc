@@ -2,8 +2,8 @@ import { initPlasmicLoader } from "@plasmicapp/loader-nextjs";
 export const PLASMIC = initPlasmicLoader({
   projects: [
     {
-      id: "",  // ID of a project you are using
-      token: ""  // API token for that project
+      id: process.env.PLASMIC_ID!,  // ID of a project you are using
+      token: process.env.PLASMIC_TOKEN!  // API token for that project
     }
   ],
   // Fetches the latest revisions, whether or not they were unpublished!
